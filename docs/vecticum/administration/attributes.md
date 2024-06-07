@@ -13,19 +13,19 @@
 | id\_created        | All          | Timestamp, date document created                       |
 | id\_modified       | All          | Timestamp, last document update date                   |
 
-Please find the additional information related with attributes in [forms](forms/ "mention") section below., especially in [#form-attributes](forms/#form-attributes "mention")
+<!-- Please find the additional information related with attributes in [forms](forms/ "mention") section below., especially in [#form-attributes](forms/#form-attributes "mention") -->
 
 ## Lookup & filtering
 
 This is old document section. The updated one is under creation and constant update in:
 
-{% content-ref url="expressions-examples/" %}
-[expressions-examples](expressions-examples/)
-{% endcontent-ref %}
-
+<!-- {% content-ref url="expressions-examples/" %} -->
+<!-- [expressions-examples](expressions-examples/) -->
+<!-- {% endcontent-ref %} -->
+<!-- Pakeisti nuorodą į galiojančią -->
 You can find the additional information on Lookup & filtering properties in:
 
-&#x20; [#lookup-filtering](forms/#lookup-filtering "mention")  settings description
+<!-- &#x20; [#lookup-filtering](forms/#lookup-filtering "mention")  settings description -->
 
 ### Filter MY records
 
@@ -163,8 +163,8 @@ return ((leaveType === 'BU8g5B996L5a8XNs5Hk1') || (leaveType === 'cylo8B4LEKHs9I
 
 This above is old document section on expressions. The updated one is under creation and constant update in:
 
-{% content-ref url="expressions-examples/" %}
+<!-- {% content-ref url="expressions-examples/" %}
 [expressions-examples](expressions-examples/)
-{% endcontent-ref %}
+{% endcontent-ref %} -->
 
-Please find the additional information related with attributes in [forms](forms/ "mention") section below.
+<!-- Please find the additional information related with attributes in [forms](forms/ "mention") section below. -->
