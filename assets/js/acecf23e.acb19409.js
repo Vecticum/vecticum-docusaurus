@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvecticum_docusaurus=self.webpackChunkvecticum_docusaurus||[]).push([[1903],{1912:u=>{u.exports=JSON.parse('{"blogBasePath":"/vecticum-docusaurus/blog","blogTitle":"Blog"}')}}]);
