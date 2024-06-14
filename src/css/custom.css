@@ -28,3 +28,23 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+figure {
+  text-align: center;
+  margin: 1em 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure p {
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+p#dfdf{
+  color: blue;
+}

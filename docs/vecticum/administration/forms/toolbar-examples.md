@@ -4,15 +4,14 @@ The properties are described in: [#toolbar](../../../tutorial-basics/congratulat
 
 ## Register Button
 
-![](<../../../../assets/Screenshot 2021-03-07 132651.png>)
+![](</assets/Screenshot_2021-03-07_132651.png>)
 
 This is the example of deployment of Register button. Registration or custom registration can be launched on the button click, depending on the setup of registries in class of the document on which toolbar is placed. The description of the registries setup is introduced in: 
 
 
 ## Send notification / Start workflow Button
 
-<!-- <figure><img src="../../.gitbook/assets/image (365).png" alt=""><figcaption></figcaption></figure> -->
-![](<../../../../assets/image (365).png>)
+![](</assets/image_(365).png>)
 
 By button click startWorkflow action is launched with the following parameters:
 

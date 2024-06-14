@@ -12,7 +12,7 @@ First, give a name to a form and save it. This will create a form template and w
 
 If you would like to create the form with use of existing form, then you have to: 1) open existing form definition from Administration > Metadata > Forms, 2) create the new form by copying the existing; you have to choose from root form:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
 3\) assign new name, Save and Close. All the attributes will be copied from root to destination new one form.
 
