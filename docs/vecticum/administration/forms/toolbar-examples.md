@@ -1,6 +1,5 @@
 # Toolbar examples
 This page contains the examples of usage of toolbar buttons.
-The properties are described in: [#toolbar](../../../tutorial-basics/congratulations.md "mention")
 
 ## Register Button
 
