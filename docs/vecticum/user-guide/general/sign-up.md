@@ -5,7 +5,7 @@
 1. Open the mail you've got.
 2. Click on the link "Register" or just press the green button.
 
-![](</assets/Eng_10.png>)
+<!-- ![](</assets/Eng_10.png>) -->
 
 ## Then you'll need to register.
 
@@ -17,7 +17,7 @@
 If you're signing in with your phone number, go straight to login section.
 :::
 
-![](</assets/Eng_registration.png>)
+<!-- ![](</assets/Eng_registration.png>) -->
 
 ## After registering everything should look like this.
 

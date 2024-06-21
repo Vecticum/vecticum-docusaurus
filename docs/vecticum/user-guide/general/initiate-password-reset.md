@@ -11,15 +11,15 @@ User or company administrator can reset your password. To do that you need to:
 This only works through email
 :::
 
-![](</assets/Administrator_view.png>)
+<!-- ![](</assets/Administrator_view.png>) -->
 
 ## Password reset pop-up page
 
 A pop-up will show up and it will take you to another safe page. If you have ads blocked - it won't work.
 
-![Generated link](/assets/Link.PNG)
+<!-- ![Generated link](/assets/Link.PNG) -->
 
-![](</assets/Save_new_pass.png>)
+<!-- ![](</assets/Save_new_pass.png>) -->
 
 If this pop-up doesn't  show up - restart the page.
 
