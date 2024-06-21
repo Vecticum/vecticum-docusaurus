@@ -30,7 +30,7 @@ const config: Config = {
     locales: ['en'],
   },
 
-  staticDirectories: ['static', 'assets'],
+  staticDirectories: ['static'],
 
   presets: [
     [
