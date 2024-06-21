@@ -17,7 +17,7 @@
 If you're signing in with your phone number, go straight to login section.
 :::
 
-![](</assets/Eng_registration.png>)
+![](</assets/Eng_registration.PNG>)
 
 ## After registering everything should look like this.
 

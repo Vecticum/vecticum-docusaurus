@@ -19,7 +19,7 @@ A pop-up will show up and it will take you to another safe page. If you have ads
 
 ![Generated link](/assets/Link.PNG)
 
-![](</assets/Save_new_pass.png>)
+![](</assets/Save_new_pass.PNG>)
 
 If this pop-up doesn't  show up - restart the page.
 
