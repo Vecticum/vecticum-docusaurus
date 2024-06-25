@@ -24,9 +24,9 @@ When performing the actions described below, be careful **to not edit** the fiel
 
 ### 1.1. Navigate to Register window.
 
-1.1.1. Click on the [](<assets/Administation_module_icon.png>)  module in the left-hand side menu of the Vecticum app. The administration module will open.
+1.1.1. Click on the ![](</assets/Administation_module_icon.png>)  module in the left-hand side menu of the Vecticum app. The administration module will open.
 
-1.1.2. If you have access to only one feature of the administration module, the [](<assets/Registers_in-window_icon.png>)  window will be open automatically. If you have access to other administration module features, you will need to click on [](<assets/Registers_window_(admin_view)_icon.png>)  in the left-hand side menu for the [](<assets/Registers_in-window_icon.png>)  window to open.
+1.1.2. If you have access to only one feature of the administration module, the ![](</assets/Registers_in-window_icon.png>)  window will be open automatically. If you have access to other administration module features, you will need to click on ![](</assets/Registers_window_(admin_view)_icon.png>)  in the left-hand side menu for the ![](</assets/Registers_in-window_icon.png>)  window to open.
 
 1.1.3. Your organizations registers list will be shown in the window. Here you will be able to create and modify registers. An example **Register** window is presented below (Fig. 1).
 
@@ -36,7 +36,7 @@ When performing the actions described below, be careful **to not edit** the fiel
 
 1.2.1. Before start of a new year, registers need to be updated for all documents that have an **assigned registration year**.
 
-1.2.2. Document registers that have an assigned registration year can be easily filtered in the list. Click on the **Year** column header until the arrow points down ([](<assets/Year_column_header.png>) ). The list will be sorted by year, from newest to oldest. Now registers that have an assigned year can be seen at the top of the list (Fig. 2, highlighted rows show registers with registration year 2021).
+1.2.2. Document registers that have an assigned registration year can be easily filtered in the list. Click on the **Year** column header until the arrow points down ([](</assets/Year_column_header.png>) ). The list will be sorted by year, from newest to oldest. Now registers that have an assigned year can be seen at the top of the list (Fig. 2, highlighted rows show registers with registration year 2021).
 
 ![Figure 2. Example Register list sorted by registration year.](</assets/Example_Register_list_sorted_by_registration_year,_highlighted.png>)
 
@@ -50,14 +50,14 @@ Registers from previous years, in this example 2020 and older, should not be upd
 
 1.3.1. To update registers, you need to **create copies** of existing registers.
 
-1.3.2. In the [](<assets/Registers_in-window_icon.png>)  window select a register that requires update and click on it. The selected **Register's form** will open up (Fig. 3).
+1.3.2. In the ![](</assets/Registers_in-window_icon.png>)  window select a register that requires update and click on it. The selected **Register's form** will open up (Fig. 3).
 
 ![Figure 3. Example register form.](</assets/Example_register_form.png>)
 
-1.3.3. In the form window click on [](<assets/Edit_icon.png>)  and select [](<assets/Copy_icon.png>)  from the drop-down list. A new **Register form** window will open. All entries from the original form will have been copied to this one.
+1.3.3. In the form window click on ![](</assets/Edit_icon.png>)  and select ![](</assets/Copy_icon.png>)  from the drop-down list. A new **Register form** window will open. All entries from the original form will have been copied to this one.
 
 :::danger
-Be careful not to accidentally select [](<assets/Delete_icon.png>)   in step 1.3.3. and remove your current registers by mistake!
+Be careful not to accidentally select ![](</assets/Delete_icon.png>)   in step 1.3.3. and remove your current registers by mistake!
 
 **Do not edit** the fields in the currently in use (**original**) register form. Only edit the fields in the copied register form.
 :::
@@ -73,8 +73,8 @@ Table 1. Register form fields.
 |      **Registration number suffix**      |                                                                               Text added to ending of document registration number.                                                                               |
 |            Leading Zeros count           | Denotes the size of register to be specified in the registration number. An example register with leading zeros count of **3** would register the first document with an index of 001 and can go up to index 999. |
 |           **Registration year**          |                                                                       The year of registration. The correct year format is YYYY, e.g., 2022.                                                                      |
-|            Is register active            |                                      <p>Registers that are in use have to be</p><p>selected [](<assets/Box marked Yes.png>) .</p>                                     |
-| Is register default for autoregistration |                                          <p>Active registers have to be</p><p>selected [](<assets/Box marked Yes.png>) .</p>                                          |
+|            Is register active            |                                      <p>Registers that are in use have to be</p><p>selected ![](</assets/Box_marked_Yes.png>) .</p>                                     |
+| Is register default for autoregistration |                                          <p>Active registers have to be</p><p>selected ![](</assets/Box_marked_Yes.png>) .</p>                                          |
 |              **Next index**              |                                                                         Index to be given to the next document assigned to this register.                                                                         |
 |                Object type               |                                                                 This field should not be changed! It specifies the document type to be registered.                                                                |
 |            Classes to register           |                                This field should not be changed! The field is not required, and might have been left empty. The field specifies the document type to be registered.                               |
@@ -88,11 +88,11 @@ Table 1. Register form fields.
 
 ![Figure 4. Example register form after it has been copied and updated.](</assets/Example_register_form_after_it_has_been_copied_and_updated.png>)
 
-1.3.7. All necessary edits have been made. Click on [](<assets/Save_icon.png>)  or [](<assets/Save_and_close_icon.png>)  to save the new register.
+1.3.7. All necessary edits have been made. Click on ![](</assets/Save_icon.png>)  or ![](</assets/Save_and_close_icon.png>)  to save the new register.
 
-1.3.8. After closing the copied form, you will be brought back to the original form. You **do not** need to **edit** the original form. Just [](<assets/Close_icon.png>)  it and continue updating other registers as required.
+1.3.8. After closing the copied form, you will be brought back to the original form. You **do not** need to **edit** the original form. Just ![](</assets/Close_icon.png>)  it and continue updating other registers as required.
 
-1.3.9. If you want to maker other changes to a new register after closing it, just select it from the list, make the necessary edits and [](<assets/Save_icon.png>)  or [](<assets/Save_and_close_icon.png>)  to save the changes.
+1.3.9. If you want to maker other changes to a new register after closing it, just select it from the list, make the necessary edits and ![](</assets/Save_icon.png>)  or ![](</assets/Save_and_close_icon.png>)  to save the changes.
 
 1.3.10. Example register list updated for the year 2022 is shown below (Fig. 5, highlighted rows show registers with registration year 2022).
 
@@ -110,9 +110,9 @@ Users that have the role "Company contacts administrator" can create and assign 
 
 ### 2.1. Navigate to security Groups window.
 
-2.1.1. Click on the [](<assets/Administation_module_icon.png>)  module in the Vecticum app left-hand side menu.
+2.1.1. Click on the ![](</assets/Administation_module_icon.png>)  module in the Vecticum app left-hand side menu.
 
-2.1.2. Select the module that contains your organization's title and is between [](<assets/Setup_module_icon.png>)  and [](<assets/Metadata_module_icon.png>) . Click on [](<assets/Groups_window_icon.png>) .
+2.1.2. Select the module that contains your organization's title and is between ![](</assets/Setup_module_icon.png>)  and ![](</assets/Metadata_module_icon.png>) . Click on ![](</assets/Groups_window_icon.png>) .
 
 2.1.3. Your organizations security **Groups** window will be shown. An example security **Groups** window can be seen in figure 6.
 
@@ -120,7 +120,7 @@ Users that have the role "Company contacts administrator" can create and assign 
 
 ### 2.2. Create and assign a security group.
 
-2.2.1. To create a new group click [](<assets/New_group_icon_(1).png>) in the [](<assets/Groups_window_icon.png>)  window. A new security **Group form** will open (Fig. 7).
+2.2.1. To create a new group click ![](</assets/New_group_icon_(1).png>) in the ![](</assets/Groups_window_icon.png>)  window. A new security **Group form** will open (Fig. 7).
 
 ![Figure 7. New security Group form.](</assets/New_security_Group_form.png>)
 
@@ -130,7 +130,7 @@ Users that have the role "Company contacts administrator" can create and assign 
 
 2.2.4. In the Roles field select "Company Setup administrator" from the drop-down list.
 
-2.2.5. All necessary edits have been made. Click on [](<assets/Save_icon.png>)  or [](<assets/Save_and_close_icon.png>)  to save the security group and assign it to the responsible persons. The responsible persons will now be able to access the Registers window.
+2.2.5. All necessary edits have been made. Click on ![](</assets/Save_icon.png>)  or ![](</assets/Save_and_close_icon.png>)  to save the security group and assign it to the responsible persons. The responsible persons will now be able to access the Registers window.
 
 ### 2.3. Edit existing security group
 
@@ -140,4 +140,4 @@ Users that have the role "Company contacts administrator" can create and assign 
 
 2.3.3. Specify the responsible person in the Persons field and in the Roles field select "Company Setup administrator" from the drop-down list.
 
-2.3.4. Click on [](<assets/Save_icon.png>)  or [](<assets/Save_and_close_icon.png>)  to save the edits to the security group. The responsible persons will now be able to access the Registers window.
+2.3.4. Click on ![](</assets/Save_icon.png>)  or ![](</assets/Save_and_close_icon.png>)  to save the edits to the security group. The responsible persons will now be able to access the Registers window.
