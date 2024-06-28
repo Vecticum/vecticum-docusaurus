@@ -186,5 +186,4 @@ Language parameter for translations, default value is "en", for Lithuanian langu
 
 #### Example of config JSON
 
-  [example.json](/assets/example_(1).json)
-
+<DownloadButton fileName="example_(1).json" />
