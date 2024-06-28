@@ -22,7 +22,12 @@ You will be notified by e-mail of the approval or rejection of the mission and t
 To delegate tasks to a substitute person while you are on a business trip, you must go to your Employee card, select Out of Office, and indicate a substitute person there. Specifying a substitute in a Business trip form will not delegate the tasks.
 :::
 
-![Out of Office function in an Employee card allows you to delegate tasks to a substitute person.](</assets/image_(309).png>)
+<figure>
+    ![Out of Office function in an Employee card allows you to delegate tasks to a substitute person.](</assets/image_(309).png>)
+  <figcaption>
+    <p>Out of Office function in an Employee card allows you to delegate tasks to a substitute person.</p>
+  </figcaption>
+</figure>
 
 **3. Business trip extension**
 
@@ -38,4 +43,6 @@ The posting extension confirmation sequence is automatically activated by pressi
 
 You can view Bussines trip requests and their status here:
 
+<figure>
 ![](/assets/nomer8.jpg)
+</figure>

@@ -39,10 +39,19 @@ figure img {
   height: auto;
 }
 
+img {
+  border-radius: .25rem;
+  overflow: hidden;
+  border: 1px solid rgba(211, 211, 211, 0.4);
+}
+
 figure p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-style: italic;
   color: #666;
-  margin-top: 0.5em;
+  margin: 0;
 }
 
 p#dfdf{

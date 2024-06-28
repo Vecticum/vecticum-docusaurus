@@ -2,7 +2,6 @@
 
 **1. If the assignment was rejected at the time of approval and Business trip needs to be corrected**
 
-**‌**
 
 You will be given the task of correcting Business trip. Doing so will restart the approval sequence.
 

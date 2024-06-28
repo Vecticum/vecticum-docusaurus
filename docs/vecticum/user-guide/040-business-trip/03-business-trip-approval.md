@@ -20,15 +20,18 @@ After logging in to the Vecticum system, you can approve or reject the Business 
 
 **‌**To confirm a Business trip on your mobile phone, open Company Business trip Email in your phone browser at https://app.vecticum.com/ and sign in with your Microsoft account by entering your login email and passsword.
 
+<figure>
 ![](/assets/nomer22.jpg)
-
 ![](/assets/nomer23.jpg)
+</figure>
 
 **4. Approval of Business Trip Extension (For Manager)**
 
 You will be informed by email about the extension of the Business trip by a letter. You can see the details of the extension of the Business trip when you open the Business trip requested by the employee.
 
+<figure>
 ![](/assets/nomer24.jpg)
+</figure>
 
 ![](https://lh5.googleusercontent.com/TNPlZucefzKm0lwO38Vh6CvO-PDl6hEUdiKe1qDoOwS9LI1maEBJfJenaH5juXvgAfu-N2NNUyHq-37QKPhDc5ce6PNVs-7YWXcEMtyWnIo7KRYtFE5Lq8uAOENi8f8WQ5-pIZk)
 

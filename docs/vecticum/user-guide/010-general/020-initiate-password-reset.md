@@ -19,13 +19,21 @@ A pop-up will show up and it will take you to another safe page. If you have ads
 
 ![Generated link](/assets/Link.PNG)
 
-![](</assets/Save_new_pass.PNG>)
+<figure>
+  ![](</assets/Save_new_pass.PNG>)
+</figure>
+
 
 If this pop-up doesn't  show up - restart the page.
 
 1. In this pop-up create a new strong and safe password.
 2. After creating and memorizing it - click save.
 
-![Password changed](/assets/reseted.PNG)
+<figure>
+  ![Password changed](/assets/reseted.PNG)
+  <figcaption>
+    <p>Password changed</p>
+  </figcaption>
+</figure>
 
 After seeing this, you can comeback to home page.

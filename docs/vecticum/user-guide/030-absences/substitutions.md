@@ -3,7 +3,7 @@ description: How it works and how to setup
 ---
 
 # Substitutions
-
+How it works and how to setup
 ### Substitution variable types
 
 Substitution document consists of these variables:

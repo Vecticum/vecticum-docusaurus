@@ -13,7 +13,7 @@
 2. The corporation who invited you to join this app will show up above the "Terms and Conditions"
 3. Make sure you read or know "Terms and Conditions" and accept it.
 
-:::info custom-hint info
+:::info
 If you're signing in with your phone number, go straight to login section.
 :::
 

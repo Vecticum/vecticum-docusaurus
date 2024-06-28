@@ -3,14 +3,15 @@ description: This page contains the basics about managing persons' and employees
 ---
 
 # Employee and Person Cards
-
+This page contains the basics about managing persons' and employees' data.
 ## Persons
 
 Persons list is the basic list of the persons in the system. The list is placed in HR Core -> Persons:&#x20;
 
 
-
+<figure>
 ![Description](/assets/image_(150).png)
+</figure>
 
 In administrative part of the system you can reach the persons list in : Administration -> Company custom name (section) -> Persons
 
@@ -40,7 +41,9 @@ In order to transfer person to employee, the following action should be initiate
 
 The list of employees is dedicated for managing employees' data with the use of full HR functionality in Vecticum. The list is placed in HR Core -> Employees
 
+<figure>
 ![Description](/assets/image_(70).png)
+</figure>
 
 Each Employee card is split by the following sections (buttons) available on the left side of the card:
 
