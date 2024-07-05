@@ -35,7 +35,7 @@ or from browser menu choose Install app&#x20;
 5\. Once it is installed, it is located at the end of your apps list:
 
 <figure>
-![](/assets/6.png)
+![](/assets/6.PNG)
 </figure>
 
 6\. By pressing and holding the vecticum above shortcut (icon) you can drag and drop the app on your main - home screen:
