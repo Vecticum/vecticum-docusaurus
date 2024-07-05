@@ -12,37 +12,37 @@ Attaches to File or Files type of control attribute specified in 'Action keys', 
 
 The templates are stored in Administration -> Metadata -> Templates. File content synchronization is performed once while adding the file from template.
 
-The example is described in: [#add-file-from-template](../expressions-examples/workflow-step-system-actions.md#add-file-from-template "mention")
+<!-- The example is described in: [#add-file-from-template](../expressions-examples/workflow-step-system-actions.md#add-file-from-template "mention") -->
 
 ### Create
 
 Creates automatically any system object of the provided object type and class. By delivering in 'Value expression' collection you can setup the value of attributes of created object.&#x20;
 
-The example is described in: [#create](../expressions-examples/workflow-step-system-actions.md#create "mention")
+<!-- The example is described in: [#create](../expressions-examples/workflow-step-system-actions.md#create "mention") -->
 
 ### Convert to PDF
 
 Converts the file attachment of picture type (\*.jpg) into the file attachment in \*.pdf format. Original file is deleted and the newly created pdf file is placed instead. The convertion is performed for attribute which is appointed in _actionKeys_ property of the step.
 
-The example is described in: [#convert-to-pdf](../expressions-examples/workflow-step-system-actions.md#convert-to-pdf "mention")
+<!-- The example is described in: [#convert-to-pdf](../expressions-examples/workflow-step-system-actions.md#convert-to-pdf "mention") -->
 
 ### Delay
 
 This type of the action is used to put on hold (wait) with workflow process execution. When system goes to this type of the step it becomes active immediately; but it gets completed automatically depending on additional setup.&#x20;
 
-[#delay](../expressions-examples/workflow-step-system-actions.md#delay "mention")
+<!-- [#delay](../expressions-examples/workflow-step-system-actions.md#delay "mention") -->
 
 ### E-signing
 
 
 
-[#e-signing](../expressions-examples/workflow-step-system-actions.md#e-signing "mention")
+<!-- [#e-signing](../expressions-examples/workflow-step-system-actions.md#e-signing "mention") -->
 
 ### Join - to - PDF
 
 Joins the content of the \*.pdf physical files uploaded to the attribute of Files type of control and saves it as the content of single existing \*.pdf.
 
-[#join-to-pdf](../expressions-examples/workflow-step-system-actions.md#join-to-pdf "mention")
+<!-- [#join-to-pdf](../expressions-examples/workflow-step-system-actions.md#join-to-pdf "mention") -->
 
 ### Match items
 
@@ -54,7 +54,7 @@ The example is described in: [#match-items](../expressions-examples/workflow-ste
 
 
 
-[#propagate-read-access-to-related-objects](../expressions-examples/workflow-step-system-actions.md#propagate-read-access-to-related-objects "mention")
+<!-- [#propagate-read-access-to-related-objects](../expressions-examples/workflow-step-system-actions.md#propagate-read-access-to-related-objects "mention") -->
 
 ### Recalculate workflow
 
@@ -70,13 +70,13 @@ in the scenario that it likely that the value of the root attribute changes duri
 
 Applying in advance (with smaller Step No.) workflow system step with the use of this action, ensures that system will use current values of the attributes from which responsible performers of the next step are dynamically extracted.
 
-[#recalculate-workflow](../expressions-examples/workflow-step-system-actions.md#recalculate-workflow "mention")
+<!-- [#recalculate-workflow](../expressions-examples/workflow-step-system-actions.md#recalculate-workflow "mention") -->
 
 ### Recalculate document expressions
 
 This action is typically used in the case when the document is not created / updated manually but by system action.  For example  the values of other keys (from which depend values of other attributes by setup of their expressions) are changed by actions performed in workflow system steps. Another example can be creation of the document by api.&#x20;
 
-[#recalculate-document-expressions](../expressions-examples/workflow-step-system-actions.md#recalculate-document-expressions "mention")
+<!-- [#recalculate-document-expressions](../expressions-examples/workflow-step-system-actions.md#recalculate-document-expressions "mention") -->
 
 ### Register
 
@@ -84,13 +84,13 @@ Performs the registration of the document over which the workflow is executed. S
 
 <figure>![](/assets/image_(238).png)</figure>
 
-More information on the registration process: [#registers](../object-types.md#registers "mention")
+<!-- More information on the registration process: [#registers](../object-types.md#registers "mention") -->
 
 ### Rename file
 
 Changes the name of the file. Extension is not changed.&#x20;
 
-[#rename-file](../expressions-examples/workflow-step-system-actions.md#rename-file "mention")
+<!-- [#rename-file](../expressions-examples/workflow-step-system-actions.md#rename-file "mention") -->
 
 ### Save matched items
 
@@ -98,13 +98,13 @@ This functionality is related with 'Match items' system action describe above in
 
 In the case not all the items have automatically been matched successfully by system as the result of execution of 'Match items' system step in workflow, user manually performs matching (picking item in lookup attribute) of the items in cost allocation invoice lines. In order to reuse this mapping for any future auto matching, these performed manually matches can be automatically transferred into mapping table.
 
-Example of usage: [#save-matched-items](../expressions-examples/workflow-step-system-actions.md#save-matched-items "mention")
+<!-- Example of usage: [#save-matched-items](../expressions-examples/workflow-step-system-actions.md#save-matched-items "mention") -->
 
 ### Send email
 
 The action of sending email message as the result of executing system step related with this action. Sender, recipient, subject and body of the delivered email are defined in Value expression.
 
-You can find the representative example in: [#send-email](../expressions-examples/workflow-step-system-actions.md#send-email "mention")
+<!-- You can find the representative example in: [#send-email](../expressions-examples/workflow-step-system-actions.md#send-email "mention") -->
 
 ### Set field value
 
@@ -114,7 +114,7 @@ Sets the value of the attribute placed on document form, over which workflow is 
 
 This action is efficient in result, only if run for leave request cancelation. On Leave request form (available in Absences -> Leaves) there is 'Cancelation' tab from which you can create  Cancel Leave Request for the certain Leave request.  When leave cancelation is finalized in the process, then the system step with this action should be called to cancel all substitutions (object type: Substitutions, class: Substitution by document) on main document - leave request.&#x20;
 
-### [#set-substitution-status-to-canceled](../expressions-examples/workflow-step-system-actions.md#set-substitution-status-to-canceled "mention")
+<!-- ### [#set-substitution-status-to-canceled](../expressions-examples/workflow-step-system-actions.md#set-substitution-status-to-canceled "mention") -->
 
 ### Split files as separate documents
 
@@ -124,15 +124,16 @@ Scenario 1: Appointed for the step key is: files (of files control type). Then: 
 
 Scenario 2: Appointed for the step key is DIFFERENT THAN: files (of files control type). Then: Creates the full copy of the document as many times as placed in appointed in step definition key, physical attachments. Each created document contains all physical files - attachments from the root document.&#x20;
 
-[#split-files-as-separate-documents](../expressions-examples/workflow-step-system-actions.md#split-files-as-separate-documents "mention")
+<!-- [#split-files-as-separate-documents](../expressions-examples/workflow-step-system-actions.md#split-files-as-separate-documents "mention") -->
 
 ### Split rows by default template
 
 It is used for cost allocation lines in invoice processing. It splits the total value of the line by creating the new lines after this action is executed. Original line remains in place in allocation lines. The split is performed by checking the default vendor template assigned to the vendor which is assigned to the invoice. System searches in the template lines (this is children type of control) for the same item as the item used in cost allocation line. If it matches it created new cost allocation line with the full metadata set as defined in line of the template. The only exception is line amount - in newly created line it is equal to original amount multiplied by 'Percents'/100. 'Perecents' is the percentage part of the split of original amount - it is setup for every line in template. Typically in vendor template, for each considered item, there are appearing a few rows which 'Perecents' sum equal to 100.
 
 Example is available in:
+<!-- TO DO -->
 
-[#split-rows-by-default-template](../expressions-examples/workflow-step-system-actions.md#split-rows-by-default-template "mention")
+<!-- [#split-rows-by-default-template](../expressions-examples/workflow-step-system-actions.md#split-rows-by-default-template "mention") -->
 
 ### Stamp file
 
@@ -170,30 +171,30 @@ Example how it may look:
 
 ![](</assets/image_(191).png>)
 
-[#stamp-file](../expressions-examples/workflow-step-system-actions.md#stamp-file "mention")
+<!-- [#stamp-file](../expressions-examples/workflow-step-system-actions.md#stamp-file "mention") -->
 
 ### Start process on related object
 
 Starts the workflow for the related object/-s which are appointed by key's (defined by step setup) values.
 
-[#start-process-on-related-object](../expressions-examples/workflow-step-system-actions.md#start-process-on-related-object "mention")
+<!-- [#start-process-on-related-object](../expressions-examples/workflow-step-system-actions.md#start-process-on-related-object "mention") -->
 
 ### Stop parent process
 
 When this step is executed on the child (Children control type of the relation) object, then on it's parent object (typically document) it stops the running workflow. &#x20;
 
-[#stop-parent-process](../expressions-examples/workflow-step-system-actions.md#stop-parent-process "mention")
+<!-- [#stop-parent-process](../expressions-examples/workflow-step-system-actions.md#stop-parent-process "mention") -->
 
 ### Switch workflow
 
 Stops the currently running workflow and starts the new one over the same document.&#x20;
 
-[#switch-workflow](../expressions-examples/workflow-step-system-actions.md#switch-workflow "mention")
+<!-- [#switch-workflow](../expressions-examples/workflow-step-system-actions.md#switch-workflow "mention") -->
 
 ### Update related objects
 
 On every related object from Children type of attribute appointed in definition of the step, system performs the update of the single attribute (key) appointed in the value expression with the value of the same key on the main document.
 
-[#update-related-objects](../expressions-examples/workflow-step-system-actions.md#update-related-objects "mention")
+<!-- [#update-related-objects](../expressions-examples/workflow-step-system-actions.md#update-related-objects "mention") -->
 
 ###
