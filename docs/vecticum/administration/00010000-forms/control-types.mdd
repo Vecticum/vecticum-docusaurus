@@ -20,7 +20,7 @@ Allows to add a Yes/No choice. Displays a checkbox in a form.
 
 Creates a child element in the form that contains the view of specified objects and allows to create a new object directly from the form.
 
-For this control type, you have to configure [#lookup-filtering](./#lookup-filtering "mention") settings.
+For this control type, you have to configure [Lookup filtering](./#lookup-filtering "mention") settings.
 
 Children are used only in the case that we want to configure dependable lines to the parent of object(-s) of single object type. It means that the children will belong always only to the parent of the object of single object type. For example we want to add health inspection records to the person form. Such record does not make sense if it is not related with the person. They always be created from the perspective of the person and the relation will not be visible as separate attribute. Also if there is no other need to observe such records from another perspective or from relation to another types of objects.&#x20;
 
@@ -152,7 +152,7 @@ Provides a calendar popup and allows to set a collection of ranges (from - to) o
 
 Provides a list of items and allows to select one item. No filtering is applied as you type. While typing a letter (e.g. : 'a', for dropdown for Status) system selects on the dropdown list the first position which value starts with the letter ('Active'). Pressing the same letter again selects 2nd position starting with the letter, in the example case 'Applied'. So by repeating typing of the first letter user can navigate on the list. Pressing other letter (like 'p' after 'a'), will result in selection of the first value starting from 'p' (Pateiktas).
 
-For this control type, you have to configure  [#lookup-filtering](./#lookup-filtering "mention") settings.
+For this control type, you have to configure  [Lookup filtering](./#lookup-filtering "mention") settings.
 
 This kind of control is used rather in the case , there is smaller list of the available values and the user will be making choice by pointing manually one of them from the list, on which every available value is displayed. From the angle of navigation through the items on the list, it is recommended to use it for short, single word values.
 
@@ -174,7 +174,7 @@ Allows to add multiple files to an object (select from file explorer or drag and
 
 A select field that allows you to select multiple items.
 
-For this control type, you have to configure [#lookup-filtering](./#lookup-filtering "mention")  settings. When you insert the cursor in the value part of this attribute, the list will extend. When start typing the presented list will be filtered in a way that remaining values will contain (not only start with) inserted phrase.
+For this control type, you have to configure [Lookup filtering](./#lookup-filtering "mention")  settings. When you insert the cursor in the value part of this attribute, the list will extend. When start typing the presented list will be filtered in a way that remaining values will contain (not only start with) inserted phrase.
 
 
 
@@ -190,7 +190,7 @@ Allows to enter numbers (integers and decimal). No letters are allowed. Dot (.) 
 
 Allows to create a new object of the selected type directly from the form.
 
-For this control type, you have to configure [#lookup-filtering](./#lookup-filtering "mention")  settings.
+For this control type, you have to configure [Lookup filtering](./#lookup-filtering "mention")  settings.
 
 Contrary to the Children type of control (which can only create parent's own dependable children), Relation view holds evident, open and configurable definition of the rules of displaying the items in the view. It is more flexible than Children. You can see the attributes of items displayed in relation view which create the relation with main object - which is beneficial in comparison to Children where the relation is not transparent from the side of the child. Also in  relation view you can define the relation between items displayed and main object in more complex way; not only pointing the main object itself from item but also with possibility to setup rules like: from main object show the items which in attribute x, contain the same value as parent object contains in attribute y. Let's work out in below the 2 examples of configuring the relation view.
 
@@ -297,7 +297,7 @@ Another part of the setup will be to take care by security restrictions to creat
 
 Select attribute allows user to select one item.
 
-For this control type, you have to configure  [#lookup-filtering](./#lookup-filtering "mention")  settings.
+For this control type, you have to configure  [Lookup filtering](./#lookup-filtering "mention")  settings.
 
 When you insert the cursor in the value part of this attribute, the list will extend. When start typing the presented list will be filtered in a way that remaining values will contain (not only start with) inserted phrase.
 
@@ -335,7 +335,7 @@ An expandable text area where you can enter any text. A few line are possible to
 
 Typehead control is a select field that filters the list while you type. Only one item can be selected.
 
-For this control type, you have to configure  [#lookup-filtering](./#lookup-filtering "mention")  settings.
+For this control type, you have to configure  [Lookup filtering](./#lookup-filtering "mention")  settings.
 
 In comparison to Select type of control, it additionally bolds out matching part of the presented value on the list.
 
@@ -379,5 +379,5 @@ In the left column: on the training form, there is presented the definition of m
 
 Both 'multi relations' attributes (from left and right column) operate (read, add, remove) on the same relations table. So the manipulation from one multi relations attribute, will also have the effect on the presented list in the 2nd one multi relations attribute and vice versa.&#x20;
 
-Part of the setup is described in [#lookup-filtering](./#lookup-filtering "mention")&#x20;
+Part of the setup is described in [Lookup filtering](./#lookup-filtering "mention")&#x20;
 

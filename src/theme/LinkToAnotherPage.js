@@ -4,20 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-export default function LinkToAnotherPage({ fileName }) {
+export default function LinkToAnotherPage({ text, path }) {
 
     return (
-        <div className="file-download">
-            <div className='icon'>
-                <FontAwesomeIcon icon={faDownload} size="xl"/>
-                <div className='size'>
-                    {fileSize && <span> ({fileSize} KB)</span>}
-                </div>
-            </div>
-            
-            <div className='file'>
-                <a href={fileUrl} download>{fileName}</a>
-            </div>
+        <a className="link-to-another-page" href={path}>{text}
+        <div>
+            <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
         </div>
+        </a>
     );
 }

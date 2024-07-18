@@ -43,7 +43,10 @@ If this pop-up doesn't  show up - restart the page.
 2. After creating and memorizing it - click save.
 
 <figure>
-![Password changed](/assets/reseted.PNG)
+   ![Password changed](/assets/reseted.PNG)
+   <figcaption>
+      <p>Password changed</p>
+   </figcaption>
 </figure>
 
 After seeing this, you can comeback to home page.

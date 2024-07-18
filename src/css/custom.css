@@ -58,10 +58,10 @@ p#dfdf{
   color: blue;
 }
 
-.file-download{
+.file-download, .link-to-another-page{
   display: flex;
   border: 1px solid lightgray;
-  border-radius: 10px;
+  border-radius: 5px;
   min-height: 60px;
 }
 
@@ -76,4 +76,40 @@ p#dfdf{
 .file-download > .file {
   display: flex;
   align-items: center;
+}
+
+
+.link-to-another-page {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 25px;
+}
+
+.link-to-another-page a{
+  vertical-align: center;
+}
+
+.link-to-another-page:hover,
+.link-to-another-page:hover * {
+  color: blue;
+  border-color: blue;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+thead {
+  width: 100%;
+}
+
+/* Ensure table cells don't overflow */
+mark {
+  word-break: break-all;
 }
