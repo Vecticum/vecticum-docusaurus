@@ -10,6 +10,15 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'New documentation page!',
+    Svg: require('@site/static/img/vecticum.svg').default,
+    description: (
+      <>
+        We will use this tool to save documentation.
+      </>
+    ),
+  },
+  {
     title: 'Easy to Use',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (

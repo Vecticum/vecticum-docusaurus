@@ -33,7 +33,7 @@ A pop-up will show up and it will take you to another safe page. If you have ads
 </figure>
 
 <figure>
-![](</assets/Save_new_pass.PNG>)
+![](</assets/Savenewpass.png>)
 </figure>
 
 If this pop-up doesn't  show up - restart the page.
