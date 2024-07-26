@@ -84,7 +84,7 @@ recruitimentCampain - is the key for relation view type attribute which exposes 
 
 For single recruitment row in every iteration, extracted position id is added to the array of positions, which is finally returned.  &#x20;
 
-You can find other description example of 'array type processing' in:  [attribute-expression-with-array-processing.md](attribute-expression-with-array-processing.md "mention")
+You can find other description example of 'array type processing' in:  [Attribute expression with array processing](attribute-expression-with-array-processing "mention")
 
 ##
 

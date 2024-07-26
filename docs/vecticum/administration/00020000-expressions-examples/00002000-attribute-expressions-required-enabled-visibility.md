@@ -73,10 +73,7 @@ Darbo valandos - this leave type is marked with id : iK5dbLDQU69DTdISLKsF (1 of 
 
 Please find the more detailed operator description:&#x20;
 
-<!-- // TO DO smth here -->
-<!-- {% content-ref url="javascript-operators.md" %} -->
-[javascript-operators.md](javascript-operators.md)
-<!-- {% endcontent-ref %} -->
+[Javascript Operators](./javascript-operators)
 
 ## Properties definition
 

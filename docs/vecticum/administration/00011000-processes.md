@@ -6,18 +6,13 @@ description: >-
 
 # Processes
 
-<!-- TO DO -->
-<!-- {% content-ref url="expressions-examples/" %} -->
-[expressions-examples](expressions-examples/)
-<!-- {% endcontent-ref %} -->
-
 You can find relevant workflow step expressions examples in:
 
-[workflow-step-expression-conditions-duration.md](expressions-examples/workflow-step-expression-conditions-duration.md "mention")
+[workflow step expression conditions duration](expressions-examples/workflow-step-expression-conditions-duration "mention")
 
 and in:
 
-[workflow-step-system-actions.md](expressions-examples/workflow-step-system-actions.md "mention")
+[workflow step system actions](expressions-examples/workflow-step-system-actions "mention")
 
 ## How to write a Conditional Expression?
 
