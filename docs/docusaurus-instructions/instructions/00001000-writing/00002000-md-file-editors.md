@@ -14,6 +14,8 @@ Double asterisks will bold your text:
 
 and so on.
 
+## Editors
+
 Fortunatelly, you don't need to memorize this syntax. There is some online MD editors you can use. Simply find any MD editor, format your text and then paste result to Docusaurus.
 
 Few options:

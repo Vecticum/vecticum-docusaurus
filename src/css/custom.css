@@ -113,3 +113,13 @@ thead {
 mark {
   word-break: break-all;
 }
+
+.flex-alligned{
+  width: 100%;
+  display: flex;
+}
+
+.flex-alligned * {
+  flex: 1;
+}
+
