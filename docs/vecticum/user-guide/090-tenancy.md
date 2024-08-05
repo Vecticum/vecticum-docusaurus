@@ -14,7 +14,7 @@ In order to create a relationship between tenancy companies, all of them require
 
 Example:&#x20;
 
-![asdf](</assets/image_(284).png>)
+![](</assets/image_(284).png>)
 
 ### Other companies
 

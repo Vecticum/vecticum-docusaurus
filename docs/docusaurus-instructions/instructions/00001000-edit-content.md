@@ -20,6 +20,7 @@ Sometimes you will get errors. When you fix the error, sometimes you need to ref
 ## File naming
 
 To sort instructions in custom order, number at the beginning should be given. Docusaurus sorts document in alphabet order, so add a number to file, for example 00010000 or 00000100 and so on. Initial numeration starts as 00001000, 00002000, 00003000, ... .
+For now, ordering number should contain 8 digits.
 
 You will find examples immediately after you enter Visual Studio Code.
 

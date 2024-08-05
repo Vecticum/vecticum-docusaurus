@@ -1,16 +1,16 @@
-// src/components/DownloadButton.js
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Link from '@docusaurus/Link';
 
 export default function LinkToAnotherPage({ text, path }) {
 
     return (
-        <a className="link-to-another-page" href={path}>{text}
-        <div>
-            <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
-        </div>
-        </a>
+        <Link className="link-to-another-page" to={path}>
+            {text}
+            <div>
+                <FontAwesomeIcon icon={faArrowRight} />
+            </div>
+        </Link>
     );
 }

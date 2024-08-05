@@ -4,7 +4,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Vecticum Documentation',
-  tagline: 'This is Vecticum documentation, based on Docusaurus',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -71,7 +70,15 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Instructions',
-        },
+        }
+        // ,
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'instructionsSidebar',
+        //   position: 'left',
+        //   label: 'Docusaurus instructions',
+        // },
+        
         // {to: '/blog', label: 'Blog', position: 'left'},
         // {
         //   href: 'https://github.com/facebook/docusaurus',
@@ -80,51 +87,51 @@ const config: Config = {
         // },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Stack Overflow',
-        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-        //     },
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discordapp.com/invite/docusaurus',
-        //     },
-        //     {
-        //       label: 'Twitter',
-        //       href: 'https://twitter.com/docusaurus',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'More',
-        //   items: [
-        //     {
-        //       label: 'Blog',
-        //       to: '/blog',
-        //     },
-        //     {
-        //       label: 'GitHub',
-        //       href: 'https://github.com/facebook/docusaurus',
-        //     },
-        //   ],
-        // },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus.`,
-    },
+    // footer: {
+    //   style: 'dark',
+    //   links: [
+    //     {
+    //       title: 'Docs',
+    //       items: [
+    //         {
+    //           label: 'Tutorial',
+    //           to: '/docs/intro',
+    //         },
+    //       ],
+    //     },
+    //     // {
+    //     //   title: 'Community',
+    //     //   items: [
+    //     //     {
+    //     //       label: 'Stack Overflow',
+    //     //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+    //     //     },
+    //     //     {
+    //     //       label: 'Discord',
+    //     //       href: 'https://discordapp.com/invite/docusaurus',
+    //     //     },
+    //     //     {
+    //     //       label: 'Twitter',
+    //     //       href: 'https://twitter.com/docusaurus',
+    //     //     },
+    //     //   ],
+    //     // },
+    //     // {
+    //     //   title: 'More',
+    //     //   items: [
+    //     //     {
+    //     //       label: 'Blog',
+    //     //       to: '/blog',
+    //     //     },
+    //     //     {
+    //     //       label: 'GitHub',
+    //     //       href: 'https://github.com/facebook/docusaurus',
+    //     //     },
+    //     //   ],
+    //     // },
+    //   ],
+    //   copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus.`,
+    // },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
