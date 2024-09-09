@@ -6,7 +6,7 @@ description: Split by the business use cases.
 
 ## On recruitment form check if other recruitment status, related with the same candidate is not finished with Hired status
 
-<figure>![](/assets/image (325).png)<figcaption><p>Recrutiment form</p></figcaption></figure>
+<figure>![](/assets/image_(325).png)<figcaption><p>Recrutiment form</p></figcaption></figure>
 
 ```javascript
 const candStatuses=${sameCandRecs};

@@ -132,6 +132,13 @@ const config: Config = {
     //   ],
     //   copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus.`,
     // },
+    algolia: {
+      apiKey: 'e655568c94b0fc8d7963ac3f5d91587c',        // Add your DocSearch API key
+      indexName: 'vecticum',  // Add your DocSearch index name
+      appId: '615LXGT0XV',          // Optional for latest versions
+      contextualSearch: true,        // If you want contextual search
+      // Optional: See docsearch options at https://docsearch.algolia.com/docs/api/
+    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

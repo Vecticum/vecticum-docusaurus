@@ -19,7 +19,7 @@ return [{
 
 _recruiterId_ - is the key for Recruiter attribute, of Select type which appoints the person. Such defined filtered view will show only the documents in where my user is assigned as Recruiter.
 
-<figure>![](/assets/image (174).png)</figure>
+<figure>![](/assets/image_(174).png)</figure>
 
 ### Multi-select  - My documents in filtered view with Multi-select relation - as Filter Expression in view
 
@@ -60,7 +60,7 @@ dr0qWgrhztq2f5036crz: true
 
 and it's created subkeys (whether the one exists for your user with true value) like: \_id\_performsRecruitment.92OEWfCoP3jWciNR9XkL, \_id\_performsRecruitment.dr0qWgrhztq2f5036crz
 
-<figure>![](/assets/image (209).png)</figure>
+<figure>![](/assets/image_(209).png)</figure>
 
 ### A few keys filter - type of the task is meeting (Select) and I am involved in participants (Multi-select)
 
@@ -99,11 +99,11 @@ Example case: show in separate view only the recruitments when plannedWeek attri
 
 On recruitment form there is 'Planned Week' Numeric type attribute:
 
-<figure>![](/assets/image (104).png)</figure>
+<figure>![](/assets/image_(104).png)</figure>
 
 First there is deployed Boolean type attribute ifBelow12&#x20;
 
-<figure>![](/assets/image (193).png)</figure>
+<figure>![](/assets/image_(193).png)</figure>
 
 with the expression:
 
@@ -133,11 +133,11 @@ return [
 
 ifBelow12 is the key for the boolean type attribute ifBelow12. The view shows up only these recruitments which has this flag marked (auto calculated by expression from Planned Week):
 
-<figure>![](/assets/image (207).png)</figure>
+<figure>![](/assets/image_(207).png)</figure>
 
 So the only 1 of 2 documents is presented in above view; all docs:
 
-<figure>![](/assets/image (125).png)</figure>
+<figure>![](/assets/image_(125).png)</figure>
 
 ### Number - documents with number key greater or equal to the value
 
@@ -154,7 +154,7 @@ return [
 
 It shows up the documents which planned week is greater or equal to 12th week of the year:
 
-<figure>![](/assets/image (105).png)</figure>
+<figure>![](/assets/image_(105).png)</figure>
 
 PS. Implementation of 'If After 12 Week' attribute (appearing on screenshots for illustrative reasons) is not recommended from performance reasons. It is good enough to deploy only  boolean type attribute ifBelow12 with expression.&#x20;
 
