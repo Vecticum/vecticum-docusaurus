@@ -12,7 +12,7 @@ Allows to upload a person's photo.
 
 ## Boolean
 
-Allows to add a Yes/No choice. Displays a checkbox in a form.
+Allows to add a Yes/No choice. Displays a checkbox in a form. 
 
 !![](/assets/image_(247).png)
 
