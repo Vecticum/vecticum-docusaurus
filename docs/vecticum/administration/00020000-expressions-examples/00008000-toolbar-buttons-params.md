@@ -551,6 +551,25 @@ This is the example of sending notification button from custom solution of recru
 
 [Send email](../workflows/workflow-steps#send-email "mention")
 
+There is also additional thing to mention. In above example by the definition of:   
+
+```javascript
+,
+workflowInitiatorId: "departmentManagerId"
+```
+system is updating the attribute identified by the key departmentManagerId, which is placed on the task recruitment form, with the value of the user who is workflow initiator, which means the user who presses the button. You should be aware of this mechanism. In the case it is not needed you should omit this parameter and the button definition will look like the following:
+
+```javascript
+return { 
+workflowId: { 
+name: "Task Email Notification on Root Task", 
+id: "P8U0gKTVxky3dOBpmZ4E", 
+objectTypeId: "_workflows", 
+classId: "_workflows_class" }
+}
+```
+Otherwise, in the case the line exists but the attribute with such key is not present on the form, then workflow will not be started successfully.
+
 &#x20;
 
 ## update
