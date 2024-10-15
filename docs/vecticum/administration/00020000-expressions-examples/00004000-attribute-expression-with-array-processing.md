@@ -22,8 +22,8 @@ let payRate = 0;
 let latestEffectiveDate='0000-00-00';
 const employeeId = '${employeeId.id}'; 
 
-for (const compensation of compensations) \{
-   if (compensation.effectiveDate \> latestEffectiveDate &#x26;&#x26; compensation.employee &#x26;&#x26; compensation.employee.id === employeeId) \{
+for (const compensation of compensations) {
+   if (compensation.effectiveDate > latestEffectiveDate && compensation.employee && compensation.employee.id === employeeId) {
      payRate = compensation.payRate;
      latestEffectiveDate = compensation.effectiveDate;
   }
