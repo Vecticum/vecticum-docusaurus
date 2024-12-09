@@ -20,6 +20,67 @@ Creates automatically any system object of the provided object type and class. B
 
 The example is described in: [Create](../expressions-examples/workflow-step-system-actions#create "mention")
 
+By execution single Workflow System Step with 'Create' action, you can create multiple documents. The 'Value expression' of the Workflow Step System or returned value of the connected Expression, should return the follwing format:
+
+```javascript
+[
+  {
+    "name": "name of document 1",
+    "_facet": "facet of document 1"
+  },
+  {
+    "name": "name of document 2",
+    "_facet": "facet of document 2"
+  },
+  ...
+  {
+    "name": "name of document n",
+    "_facet": "facet of document n"
+ }
+]
+```
+In the above syntax there are provided only 2 attributes per each created document. Of course the set can be extended, by using the keys of the attributes existing on the created documents form.
+
+You can also provide the value of the lookup type of attribute in the created documents. Let's imagine there is Select type attribute in created document with the key sessionId. Then the syntax pattern for multiple document creation will look like following:
+
+```javascript
+[
+  {
+    "name": "name of document 1",
+    "_facet": "facet of document 1",
+     "sessionId": {
+      "name": "Name of main session",
+      "id": "8tz7OSmW4p3iWkJxyyyy",
+      "objectTypeId": "1SbM906RS3IUKg2hyyyy",
+      "classId": "l95Lh26ts18djU2Kyyyy"
+    }
+  },
+  {
+    "name": "name of document 2",
+    "_facet": "facet of document 2",
+     "sessionId": {
+      "name": "Name of main session",
+      "id": "8tz7OSmW4p3iWkJxyyyy",
+      "objectTypeId": "1SbM906RS3IUKg2hyyyy",
+      "classId": "l95Lh26ts18djU2Kyyyy"
+    }
+  },
+  ...
+  {
+    "name": "name of document n",
+    "_facet": "facet of document n",
+     "sessionId": {
+      "name": "Name of main session",
+      "id": "8tz7OSmW4p3iWkJxyyyy",
+      "objectTypeId": "1SbM906RS3IUKg2hyyyy",
+      "classId": "l95Lh26ts18djU2Kyyyy"
+    }
+ }
+]
+```
+
+
+
 ### Convert to PDF
 
 Converts the file attachment of picture type (\*.jpg) into the file attachment in \*.pdf format. Original file is deleted and the newly created pdf file is placed instead. The convertion is performed for attribute which is appointed in _actionKeys_ property of the step.
