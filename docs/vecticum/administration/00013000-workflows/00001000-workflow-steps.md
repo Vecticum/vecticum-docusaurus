@@ -79,7 +79,26 @@ You can also provide the value of the lookup type of attribute in the created do
 ]
 ```
 
+There is possibility to turn off starting default for class workflow for document while creating it by system step action create. In the scenario workflow should start when creating the same document manually. In order to setup such scenario: 
+Value expression in 'Create' system step should return parameter workflowStart with value "manual".
+Also document should have provided status value different than Initial status value in created document class form. Otherwise workflow will be started by hourly maintenance procedure anyway. The example:
 
+```javascript
+return 
+{
+  documents: [{
+    ...,
+    status: {
+      id: "...",
+      ....
+    }
+  }], 
+
+  params: {
+    workflowStart: "manual"
+  }
+}
+```
 
 ### Convert to PDF
 
