@@ -570,6 +570,25 @@ classId: "_workflows_class" }
 ```
 Otherwise, in the case the line exists but the attribute with such key is not present on the form, then workflow will not be started successfully.
 
+There is possibility to start the workflow with the appointed step. The following example illustrates the case; in startFromWorkflowStepId you have to provide as lookup the workflow step from which the workflow should be started:
+
+```javascript
+return {
+  workflowId: {
+    id: "VyQY13KVA28S3eFeEVUD",
+    name: "Purchase Contract Processing",
+    objectTypeId: "_workflows",
+    classId: "_workflows_class"
+  },
+startFromWorkflowStepId: {
+id: "YMIUKEAu54vvmDIfrpnm",
+name: "Sign Document",
+objectTypeId: "workflowSteps",
+classId: "workflowSteps_class"
+}
+}
+```
+
 &#x20;
 
 ## update
