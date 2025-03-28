@@ -26,7 +26,7 @@ Please find more information in: [Add file from template](../workflows/workflow-
 
 ## Create
 
-Creates automatically any system object of the provided object type and class. By delivering in 'Value expression' collection you can setup the value of attributes of created object. Example of the definition:
+Creates any document of the selected object type and class. The attribute values of the document to be created must be provided either in the attribute 'Value expression' or in an expression selected in the attribute 'Expression'. Example of the definition:
 
 <figure>![](/assets/image_(340).png)</figure>
 

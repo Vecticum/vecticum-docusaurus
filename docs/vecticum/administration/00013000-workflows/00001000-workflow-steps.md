@@ -16,11 +16,11 @@ The example is described in: [Add file from template](../expressions-examples/wo
 
 ### Create
 
-Creates automatically any system object of the provided object type and class. By delivering in 'Value expression' collection you can setup the value of attributes of created object.&#x20;
+Creates any document of the selected object type and class. The attribute values of the document to be created must be provided either in the attribute 'Value expression' or in an expression selected in the attribute 'Expression'.&#x20;
 
 The example is described in: [Create](../expressions-examples/workflow-step-system-actions#create "mention")
 
-By execution single Workflow System Step with 'Create' action, you can create multiple documents. The 'Value expression' of the Workflow Step System or returned value of the connected Expression, should return the follwing format:
+Multiple documents can be created with a single 'Create' action. The 'Value expression' of the Workflow Step System or returned value of the connected Expression, should return the follwing format:
 
 ```javascript
 [
@@ -39,8 +39,6 @@ By execution single Workflow System Step with 'Create' action, you can create mu
  }
 ]
 ```
-In the above syntax there are provided only 2 attributes per each created document. Of course the set can be extended, by using the keys of the attributes existing on the created documents form.
-
 You can also provide the value of the lookup type of attribute in the created documents. Let's imagine there is Select type attribute in created document with the key sessionId. Then the syntax pattern for multiple document creation will look like following:
 
 ```javascript
@@ -79,9 +77,7 @@ You can also provide the value of the lookup type of attribute in the created do
 ]
 ```
 
-There is possibility to turn off starting default for class workflow for document while creating it by system step action create. In the scenario workflow should start when creating the same document manually. In order to setup such scenario: 
-Value expression in 'Create' system step should return parameter workflowStart with value "manual".
-Also document should have provided status value different than Initial status value in created document class form. Otherwise workflow will be started by hourly maintenance procedure anyway. The example:
+If the class of the created documents does not specify manual start of the workflow, the system will automatically start the workflow on all created documents. To disable workflow autostart provide the parameter workflowStart with value "manual" and set the documets status. Provide a status that is different from the Initial status specified in the class settings. Otherwise the workflow will be started by hourly maintenance procedure. The example:
 
 ```javascript
 return 
@@ -99,6 +95,81 @@ return
   }
 }
 ```
+
+### Create (Intercompany Write)
+
+Be default the create action can only create documents in the company that the process was started. This limit can be overcome for companies connected through tenancy. Tenancy settings are explained in detail in: [Tenancy](../company-settings/tenancy#intercompany-write-persmissions "mention")
+
+Example of a create expression that use intercompany write:
+```javascript
+const documentUrl = '/view/document/' + '${id}' +
+  '?companyId=' + '${id_companyId}' +
+  '&objectTypeId=' + '${id_objectTypeId.id}' +
+  '&classId=' + '${id_classId.id}';
+return {
+  params: {
+    saveLookupToParent: true,
+    lookupAtributeKey: 'createdDoc',
+    isLookupMultiselect: false
+  },
+
+  documents:
+  {
+    companyId: '${executingCompanyId.companyId}',
+    _facet: '${_facet}',
+    name: '${name}',
+    date: '${date}',
+    authorUid: '${authorId.uid.id}',
+    objectName: '${objectId.name}',
+    yearId: ${yearId},
+    approvedExpense: Number('${approvedExpense}'),
+    linkToOriginalRequest: '<a href="' + documentUrl + '" target="_self">Original Document</a>',
+    status: ${status}
+  }
+};
+```
+The expression contains two parts "params" and "documents". Params contains the parameters of the create operation. Their main function is to specify if a lookup to the creted document should be saved in the document that started the workflow. Documents contains the document data. If more than one document should be created, than an array of objects should be specified in 'documents'.
+
+Explanation of the example.
+
+Params:
+
+1. saveLookupToParent - default is false, if this boolean is set to true, then a lookup of the created document will be saved in the "lookupAtributeKey";
+2. lookupAtributeKey - default is 'createdDoc', but it an a;ternativ key can be specified;
+3. isLookupMultiselect - default is false, set it to true if more than one document is created, than an array of lookups can be saved in the "lookupAtributeKey".
+
+Documents:
+
+1. companyId - the id of the recipient company should be provided in this attribute;
+2. authorUid - in this example the data of the author must be sent to the recipient company. Because the employee is not going to have the same id in the recipient company, a lookup cannot be sent. In stead the uid of the employee is sent. Then in the recipient company a default expression can be writen that takes employee uid and sets the attribute "authorId". A similar approach is done for "objectId".
+3. yearId - this is a lookup to a classifier year. The classifier has the same id in all companies, therefore a normal lookup can be used.
+
+
+Default expression that sets the attributes "authorId" and "objectId":
+```javascript
+const personData = $data{personData};
+const author = (personData.length > 0) ? {
+    'id': personData[0].id,
+    'name': personData[0].name,
+    'objectTypeId': personData[0].id_objectTypeId.id,
+    'classId': personData[0].id_classId.id
+    } : '';
+
+const objectData = $data{objectData};
+const object = (objectData.length > 0) ? {
+    'id': objectData[0].id,
+    'name': objectData[0].name,
+    'objectTypeId': objectData[0].id_objectTypeId.id,
+    'classId': objectData[0].id_classId.id
+    } : '';
+
+return {
+    'authorId': author,
+    'objectId': object
+};
+```
+Person data documents view configuration:
+<figure>![](/assets/person-data-documents-view.png)</figure>
 
 ### Convert to PDF
 
@@ -274,5 +345,23 @@ Stops the currently running workflow and starts the new one over the same docume
 On every related object from Children type of attribute appointed in definition of the step, system performs the update of the single attribute (key) appointed in the value expression with the value of the same key on the main document.
 
 [Update related objects](../expressions-examples/workflow-step-system-actions#update-related-objects "mention")
+
+### Update related objects (Intercompany write)
+
+
+Be default the update realtion objects action can only update documents in the company that the process was started. This limit can be overcome for companies connected through tenancy. Tenancy settings are explained in detail in: [Tenancy](../company-settings/tenancy#intercompany-write-persmissions "mention")
+
+The provided action key must be a special lookup that has the companyId attribute. Such a lookup is created by the system when using the Create action with intercompany write configuration. Otherwise the configuration of the action is identical to the non-intercompany version.
+
+Example of the lookup containing the companyId:
+```javascript
+createdDocument: {
+    id: "",
+    name: "",
+    objectTypeId: "",
+    classId: "",
+    companyId: ""
+}
+```
 
 ###
