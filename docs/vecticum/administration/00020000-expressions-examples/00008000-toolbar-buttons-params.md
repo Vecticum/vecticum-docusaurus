@@ -570,6 +570,8 @@ classId: "_workflows_class" }
 ```
 Otherwise, in the case the line exists but the attribute with such key is not present on the form, then workflow will not be started successfully.
 
+### from step
+
 There is possibility to start the workflow with the appointed step. The following example illustrates the case; in startFromWorkflowStepId you have to provide as lookup the workflow step from which the workflow should be started:
 
 ```javascript
@@ -588,6 +590,23 @@ classId: "workflowSteps_class"
 }
 }
 ```
+
+### simultaneously 
+
+There is possibility to start the workflow in a manner that it will not stop the currently running workflow. In the case there was already other active workflow on target document, as the result we will have 2 active workflows running simultaneously at the same document.
+
+```javascript
+return {
+  workflowId: {
+    id: "VyQY13KVA28S3eFeEVUD",
+    name: "Purchase Contract Processing",
+    objectTypeId: "_workflows",
+    classId: "_workflows_class"
+  },
+runSimultaneously: true 
+}
+```
+
 
 &#x20;
 
