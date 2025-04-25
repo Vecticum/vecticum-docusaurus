@@ -474,7 +474,7 @@ Starts the workflow for the related object/-s which are appointed by key's (defi
 <figure>![](/assets/image_(335).png)</figure>
 
 The started workflow is the default one assigned to the class of the document over which workflow is running.&#x20;
-This is the default setup of this feature. But by newly deployed property 'Value expression' it is possible to setup that  any other appointed workflow can be trigerred. Please see sub chapter 'starting workflow different than default'.  
+This is the default setup of this feature. But by newly deployed property 'Value expression', it is possible to setup in a way that any other appointed workflow can be trigerred. Please see sub chapter 'starting workflow different than default'.  
 
 In the above example the step was designed in order to manipulate with erpId of the customer which is in fact erpId of contract created on ERP system side by exporting separately current contract document per each customer assigned in Children type of attribute, in the key customers.&#x20;
 
@@ -498,16 +498,16 @@ Summary: related object can be single or multiple.  In the executed workflow on 
 
 The example of use:
 
-On employee consent document 'Consent to the processing of personal data' we are running the workflow which includes the  task for the employee to fill in the consent form and provide confirmation in this way by completing the task. It is assumed that only single document of 'Consent to the processing of personal data' should be valid at the time for the employee as the newest consent updates / replaces fully any previous confirmed so far by employee. So that is why while processing the newest one consent related with the employee, at the end of the process (when the current consent becomde 'Valid'), we would like to automatically change the status of latest valid consent related with the employee from 'Valid' to 'Recalled'. This is the process which was deployed for consent processing.
+On employee consent document 'Consent to the processing of personal data' we are running the workflow which includes the  task for the employee to fill in the consent form and provide confirmation in this way by completing the task. It is assumed that only single document of 'Consent to the processing of personal data' should be valid at the time for the employee as the newest consent updates / replaces fully any previous consent confirmed so far by employee. So that is why, while processing the newest one consent related with the employee, at the end of the process (when the current consent becomde 'Valid'), we would like to automatically change the status of latest valid consent related with the same employee from 'Valid' to 'Recalled'. This is the process which was deployed for consent processing.
 ![alt text](image.png)
 
  In green there is appointed the step 'Start workflow on the latest consent and in it set status to Recalled' which is 'Workflow Step System' in where we use Action='Start process on related':
 
  ![alt text](image-1.png) 
 
-In 'Action keys' is appointed lastConsentId , which is select type attribute in where we are automatically by filter and filter expression and required property appointing latest Status=Valid consent of the same employee as the one which is appointed in current consent.
+In 'Action keys' is appointed lastConsentId , which is select type attribute in where we are automatically by filter and filter expression and required property, appointing latest of Status=Valid consent related with the same employee as the one which is appointed in current consent.
 
-In 'Value expression' prpoperty of the workflow step, we are appointing other than default to the class, workflow which will be started in the following way:
+In 'Value expression' prpoperty of the workflow step, we are appointing other than default assigned to the class, workflow which will be started in the following way:
 
 ```javascript
 return { 
@@ -519,7 +519,7 @@ classId: "_workflows_class" }
 }
 ```
 
-The workflow 'Set status to Recalled' consists of single workflow system step for changing the status to Reacalled.
+The workflow 'Set status to Recalled' consists of single workflow system step for changing the status to Recalled.
 
 See also in below chapter 'Stop parent process' for related example.
 
