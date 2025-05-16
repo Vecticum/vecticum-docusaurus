@@ -623,6 +623,185 @@ First 2 steps (in blue) in main workflow were skipped, so 1st effectively active
 
 [Switch workflow](../workflows/workflow-steps#switch-workflow "mention")
 
+
+## Update documents
+
+Updates collection of the returned by 'Value expression' or 'Expression' documents with appointed (also in returned expression) set of their attributes with the appointed values (also in returned expression).
+
+Basic structure of syntax which should be included in expressions is:
+
+```javascript
+return {
+  lookupsToUpdate: collectionOfDocumentsToBeUpdated,
+  updateValues: {
+    keyOnename: 'Value1 to be assigned to keyOneName',
+    keyTwoname: 'Value2 to be assigned to keyTwoName'
+  },
+  recalculate: true,
+  overwrite: false
+}
+```
+
+To lookupsToUpdate you should return the collection of documents to be updated.
+To updateValues you should return which keys should be updated with what values.
+
+The example 1:
+
+This example updates 3 documents with a comment and transferActiveTasks property as true:
+
+```javascript
+#{getLookup}
+
+const documents = $data{vacations.id,_facet,id_objectTypeId,id_classId};
+const lookups = documents.map(x => getLookup(x));
+
+return {
+  lookupsToUpdate: lookups,
+  updateValues: {
+    comment: 'Updated by workflow Naujas',
+    transferActiveTasks: true
+  },
+  recalculate: true,
+  overwrite: false
+}
+```
+Expression result:
+
+```json
+{
+  "lookupsToUpdate": [
+    {
+      "id": "7gDVknq7ZHGKGngm0y9S",
+      "name": "Evander Ho, 2024-03-22 to 2024-03-26",
+      "objectTypeId": "sFv4Z5yYwnRBJjUvIWEE",
+      "classId": "zgDoM6frPFIBrfpC0qxZ"
+    },
+    {
+      "id": "VHtWrAYcgqYG0X2G2OZg",
+      "name": "James Dean, 2024-04-03 to 2024-04-03",
+      "objectTypeId": "sFv4Z5yYwnRBJjUvIWEE",
+      "classId": "zgDoM6frPFIBrfpC0qxZ"
+    },
+    {
+      "id": "ftknHakjQj3XoWhFWNwn",
+      "name": "Vardenis Pavardenis, 2024-03-26 to 2024-03-27",
+      "objectTypeId": "sFv4Z5yYwnRBJjUvIWEE",
+      "classId": "zgDoM6frPFIBrfpC0qxZ"
+    }
+  ],
+  "updateValues": {
+    "comment": "Updated by workflow Naujas",
+    "transferActiveTasks": true
+  },
+  "recalculate": true,
+  "overwrite": false
+}
+```
+________________________
+
+It is also possible to return array which lets the consultant to assign different sets of values to different collections of updated documents within the single 'Update documents' workflow system step.
+
+The general syntax to be returned from expression is array:
+
+```javascript
+[
+  {
+    "lookupsToUpdate": collection1OfDocumentsToBeUpdated,
+    "updateValues": {
+      "keyOnename": 'Value1 to be assigned to keyOneName to collection1OfDocumentsToBeUpdated',
+      "keyTwoname": 'Value2 to be assigned to keyTwoName to collection1OfDocumentsToBeUpdated'
+    },
+    "recalculate": true,
+    "overwrite": false
+  },
+  {
+    "lookupsToUpdate": collection2OfDocumentsToBeUpdated,
+    "updateValues": {
+      "keyOnename": 'Value1 to be assigned to keyOneName to collection2OfDocumentsToBeUpdated',
+      "keyTwoname": 'Value2 to be assigned to keyTwoName to collection2OfDocumentsToBeUpdated'
+    },
+    "recalculate": true,
+    "overwrite": false
+  },
+  ...
+]
+```
+
+Example 2:
+
+This is the example from management meeting module functionality. The step with 'Update documents' system step is run on management meeting session, while assigning questions to the current session and to the meetings already existing under the session. The assigned expression:
+
+![alt text](image-2.png)
+
+is updating already existing management meeting questions of ceratin type, which do not have related session nor meeting. But each question is assigned to the current sessions ("Board meeting session 2") and to the meeting related with the same company as the originally question belonged into in the moment of it's creation. Please notice in below returned array there are 2 elements of the array. First updates questions and relates to the meeting: 'Board meeting for TEST FRANCE Company.....' and the second, updates other set of questions to  the other meeting:
+"Board meeting for TEST LT Company.".
+
+
+```javascript
+[
+  {
+    "lookupsToUpdate": [
+      {
+        "id": "HqfGzruBwWL2wt5so3mR",
+        "name": "Test Question 1",
+        "objectTypeId": "Kx44x4ibph7QVUlQvsBl",
+        "classId": "1LnT3EOj6bZ0cPpKjIYE"
+      }
+    ],
+    "updateValues": {
+      "sessionId": {
+        "name": "Board meeting session 2",
+        "id": "I6MOP5QH6T2RzPML8GLq",
+        "objectTypeId": "1SbM906RS3IUKg2halC0",
+        "classId": "l95Lh26ts18djU2KMwVA"
+      },
+      "newBoardMeetingId": {
+        "name": "Board meeting for TEST FRANCE Company.....",
+        "id": "9eVZIITuc4SzmzTFyc3D",
+        "objectTypeId": "SDV44Tz14mR2sk6N4aOG",
+        "classId": "rVTP31zZwHrHhfFAcDB1"
+      },
+      "isSessionAssigned": true
+    },
+    "recalculate": true,
+    "overwrite": false
+  },
+  {
+    "lookupsToUpdate": [
+      {
+        "id": "16yKUnVwZKeYiqFatjui",
+        "name": "Test question 2",
+        "objectTypeId": "Kx44x4ibph7QVUlQvsBl",
+        "classId": "1LnT3EOj6bZ0cPpKjIYE"
+      },
+      {
+        "id": "2qDBz5RUpV85qXx8Gr7i",
+        "name": "Test question 3",
+        "objectTypeId": "Kx44x4ibph7QVUlQvsBl",
+        "classId": "1LnT3EOj6bZ0cPpKjIYE"
+      }
+    ],
+    "updateValues": {
+      "sessionId": {
+        "name": "Board meeting session 2",
+        "id": "I6MOP5QH6T2RzPML8GLq",
+        "objectTypeId": "1SbM906RS3IUKg2halC0",
+        "classId": "l95Lh26ts18djU2KMwVA"
+      },
+      "newBoardMeetingId": {
+        "name": "Board meeting for TEST LT Company.",
+        "id": "MtCrZHMn0rrQeNrvs8wd",
+        "objectTypeId": "SDV44Tz14mR2sk6N4aOG",
+        "classId": "rVTP31zZwHrHhfFAcDB1"
+      },
+      "isSessionAssigned": true
+    },
+    "recalculate": true,
+    "overwrite": false
+  }
+]
+```
+
 ## Update related objects
 
 On every related object from Children type of attribute appointed in definition of the step, system performs the update of the single attribute (key) appointed in the value expression with the value of the same key, placed on the main document form.&#x20;
