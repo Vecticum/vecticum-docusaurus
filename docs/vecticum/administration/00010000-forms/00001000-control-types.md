@@ -50,6 +50,13 @@ In the terms of the security, in class assigned to object type of Children items
 
 Theoretically these children items can be exposed from menu item separately but as the good practice - you **should not** configure like this, cause direct change in the table of such item will not be automatically updated in children as the part of the main object.
 
+The setting rsponsible for configuring whether children items will be directly saved to the parent document is 'Save copy to parent' in 'Advanced' tab of the class of children lines:
+
+
+<LinkToAnotherPage path="/docs/vecticum/administration/object-types#advanced-" text="Advanced"/>
+
+
+
 ## Choice
 
 A system control type for built-in data. For locally configured select lists, use dropdown, select or typehead control types.
