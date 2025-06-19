@@ -54,6 +54,7 @@ The setting rsponsible for configuring whether children items will be directly s
 
 
 <LinkToAnotherPage path="/docs/vecticum/administration/object-types#advanced-" text="Advanced"/>
+..
 
 
 
