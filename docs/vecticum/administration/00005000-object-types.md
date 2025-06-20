@@ -321,14 +321,46 @@ The mechanism launched for status change or update of attribute value of documen
 | _**Attribute**_                | _**Description**_                                                                                                                                                                                              |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Trigger name                   | Name of the trigger                                                                                                                                                                                            |
-| Trigger type                   | <p>Status change - is launched on the change of status of the main document.</p><p>Keys changed - is launched on the value change of the attributes on the form related with the class. </p>                   |
-| Trigger on - Status changes to | For the option 'Status change', should be sensitive for the changes of the value of status for the listed in here values.                                                                                      |
-| Action                         | <p>Start workflow - as the result of launching trigger launches the workflow appointed in 'Start workflow' below.</p><p>Update relations - updates the related objects to the main object attribute change</p> |
-| Start workflow                 | When Action = 'Start workflow' , launches as result the workflow specified in here                                                                                                                             |
-| Params                         | Additional parameters. (separate, more detailed guidebook will be created)                                                                                                                                     |
-| Related Object type            | When Action = 'Update relations', specifies which related object types should be updated                                                                                                                       |
-| Related to Object class        | When Action = 'Update relations', specifies which classes of related object types should be updated                                                                                                            |
-| Relation key                   | Appoints the attribute by the specified key, which defines relation of related objects.                                                                                                                        |
+| Trigger type                   | <p>Status changes - is launched on the change of status of the main document.</p><p>Keys changed - is launched on the value change of the apponited attributes on the form related with the class. </p>                   |
+| Trigger on  | <p> Status changes to - Available for the 'Trigger type'='Status changes', should be sensitive for the changes of the value of status for the listed in here values.</p><p>Keys changed - Available for the 'Trigger type'='Keys changed'. You should list in here with comma separation the key names of the attributes, which value changes on main document should launch the trigger</p>                                                                                      |
+| Also trigger on change initiated manualy                         | <p>By default triggers are excecuted on triggering them by workflow action or web api method. By checking this option, manual change performed on the document also triggers the mechanism of update.</p> |
+| Action                         | <p>Start workflow - as the result of launching trigger launches the workflow appointed in 'Start workflow' below.</p><p>Update relations - updates the related objects (by below setup) to the main document. The scope of update is configurable in Params section below.</p><p> Update documents by expression view - to be updated</p> |
+| Start workflow                 | When 'Action' = 'Start workflow' , launches as result the workflow specified in here                                                                                                                             |
+| Related Object type                 | When 'Action' = 'Update relations'. This is part of the setup of relation by which system should find destination objects to be changed. You should appoint in here the object type of the destination objects (records) to be changed.                                                                                                                             |
+| Related to Object class                 | When 'Action' = 'Update relations'. This is part of the setup of relation by which system should find destination objects to be changed. You should appoint in here the class of the destination objects (records) to be changed.                                                                                                                             |
+| Relation key                 | When 'Action' = 'Update relations'. This is part of the setup of relation by which system should find destination objects to be changed. You should appoint in here key of the lookup attribute which is placed on destination objects (records) form. In this lookup key, on related object form, the main document is appointed. 	                                                                                                                         |
+| Relation own key                 | When 'Action' = 'Update relations'. This is part of the setup of relation by which system should find destination objects to be changed. You should appoint in here key from the main document  form. Typically you should put in here value: id (see syntax example below),  if the destination (related) objects, have on their forms, lookup attribute which appoints directly to the main document (specified in 'Relation key').  PS. Please note that in more complex scenario relation can be defined in such manner that main document by 'Relation own key' appoints to other object. And related objects are appointing to the same other objetct in their  'Relation key'-s.                                                                                                                              |
+| Params                         | Defines the way the change will be performed on related objects. Typical syntax is presented below.|
+
+Params example:
+```json
+{
+"copyValues":  [{
+         "fromKey": "name", 
+         "toKey": "additionalDescription" 
+      }],
+"updateRelationAttribute": true, 
+"recalculateExpressions": true
+}
+```
+"copyValues" - defines from which key in main object to which key in related destination object value should be copied and saved,
+
+"updateRelationAttribute" - this parameter is responsible for the update of the relation attribute on related object form. The common case can be that the name of main document is updated and we expect to update it also on the related objects forms in lookup attribute (in relation key). In such case please use this parameter. This parameter can appear as standalone; so the full syntax of Params will be:
+
+```json
+{
+"updateRelationAttribute": true
+}
+```
+"recalculateExpressions" - whether with the change system also should recalculate and save expressions appearing in setup of attributes on related objects' forms. 
+
+Example of the trigger:
+
+On management meeting form, we have list of the questions (meeting agenda items) in relation view attribute. The relation between question and meeting is setup by lookup attribute (key: newBoardMeetingId) on question form. The scenario is: we would like to propagate the change of the name of the meeting to every related with the meeting question. On the meeting form such tigger has been implemented:
+
+![alt text](image-18.png)
+
+
 
 ## Class Advanced Parameters
 
