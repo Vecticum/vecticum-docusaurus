@@ -837,3 +837,32 @@ Another example is of usage of this action is to update the status of all relate
 
 
 [Update related objects](../workflows/workflow-steps#update-related-objects "mention")
+
+## Set Values
+<figure>![](/assets/setValuesExpressionExample.png)</figure>
+Action sets or updates information in more than one form attribute.
+Fill according for the example:
+ 
+Expression ‚Set values‘ example:
+```js
+#formatDate
+const newEndOfTenancy = formatDate(new Date('${endOfTenancyAfterProlongation}'));
+const endOfTenancy = ${endOfTenancy};
+const numberOfTenancyProlongation = Number('${numberOfTenancyProlongation}');
+const recurring = '${recurringTenancyProlongation}';
+let newNumberOfProlongation = null;
+if (recurring === 'true' && numberOfTenancyProlongation  > 0) {
+  newNumberOfProlongation = numberOfTenancyProlongation  - 1;
+}
+else {
+  newNumberOfProlongation = null;
+}
+return {
+  overwrite: true,
+  recalculate: true,
+  values: {
+    numberOfTenancyProlongation: newNumberOfProlongation,
+    endOfTenancy: newEndOfTenancy
+  }
+}
+```
