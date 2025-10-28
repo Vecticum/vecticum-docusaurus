@@ -62,7 +62,7 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'My Site Logo',
-        src: 'https://vecticum.com/wp-content/uploads/2020/11/vecticum-logo-300x108.png',
+        src: 'img/vecticum.svg',
       },
       items: [
         {
