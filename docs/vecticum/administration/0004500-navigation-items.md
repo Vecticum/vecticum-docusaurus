@@ -29,5 +29,7 @@ For navigation items of the type "Feature" only the route field is required. The
 
 ## Feature views
 ### User tasks
-The view shows all tasks that belong to the selected user. The view sorts all tasks into their associated classes and the user can click on the class name (tab) to view all tasks for that class. If a user has the role "Company task read rights", the user can change the chosen task performer, otherwise the user can only view his own tasks. All users can how tasks are filtered, by default the user can only see all active or all completed tasks. Other filters can also be used as in all regular views.
+The view shows all tasks that belong to the selected user. The view sorts all tasks into their associated classes and the user can click on the class name (tab) to view all tasks for that class. If a user has the role "Company task read rights" or "Company administrator", the user can change the chosen task performer, otherwise the user can only view his own tasks. All users can how tasks are filtered, by default the user can only see all active or all completed tasks. Other filters can also be used as in all regular views.
+
+If a user needs to be able to view the tasks of all other employees, he needs to be given read roles from all documents, otherwise the user will only see the tasks of documents he has access to.
 ![Figure 1. User tasks feature view.](</assets/User-tasks-feature-view.png>)
